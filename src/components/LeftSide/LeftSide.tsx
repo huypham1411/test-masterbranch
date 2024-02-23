@@ -1,7 +1,7 @@
-import { Calendar, CalendarProps, ConfigProvider, Divider } from 'antd'
+import { Button, Calendar, CalendarProps, ConfigProvider, Divider } from 'antd'
 import dayjs, { Dayjs } from 'dayjs'
 import React from 'react'
-import CardEvent from '../CardEvent/page'
+import CardEvent from '../CardEvent/CardEvent'
 import { CalendarEvent, Data } from '@/app/page'
 import clsx from 'clsx'
 
@@ -10,7 +10,7 @@ type Props = {
     selectedDate: Dayjs
     data: Data[]
     selectedEvent?: CalendarEvent
-    onEventCardClick: any
+    onEventCardClick: () => void
 }
 
 const LeftSide = ({
@@ -68,8 +68,16 @@ const LeftSide = ({
             <Divider />
             {/* this is the event from the date */}
             <div className="flex flex-col gap-[10px]">
-                <div className="text-xl font-bold text-[#0F4C81] ">
-                    Upcomming Events
+                <div className="flex flex-row justify-between">
+                    <div className="text-xl font-bold text-[#0F4C81] ">
+                        Upcomming Events
+                    </div>
+                    <Button
+                        className="hidden md:flex text-white bg-[#0F4C81] rounded-[30px] p-[10px] text-center items-center"
+                        onClick={() => alert('list events show')}
+                    >
+                        View All
+                    </Button>
                 </div>
                 <div>{selectedDate.format('DD/MM/YYYY')}</div>
                 {selectedDate && data && (

@@ -2,7 +2,7 @@
 import { Button, Calendar, CalendarProps, ConfigProvider } from 'antd'
 import dayjs, { Dayjs } from 'dayjs'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import LeftSide from '../components/LeftSide/page'
+import LeftSide from '../components/LeftSide/LeftSide'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import clsx from 'clsx'
 
@@ -168,9 +168,9 @@ export default function Home() {
                     onEventCardClick={setSelectedEvent}
                 />
             </div>
-            <div className="flex">
+            <div className="flex relative">
                 <Button
-                    className="hidden md:block"
+                    className="hidden md:block absolute z-[1] left-[10px] top-[23px] bg-white"
                     onClick={() => setSelectedDate(dayjs())}
                 >
                     Today
@@ -189,7 +189,7 @@ export default function Home() {
                         value={selectedDate}
                         onChange={onChange}
                         cellRender={cellRender}
-                        className="p-[10px]"
+                        className="p-[10px] relative"
                     />
                 </ConfigProvider>
             </div>
