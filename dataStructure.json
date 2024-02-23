@@ -1,17 +1,22 @@
 {
-    "userId": "1",
+    "userId": "userId",
     "dataByMonth": "thismonth",
     "dataEvent": [
         {
-            "eventTitle": "string",
-            "duration": "string",
-            "isAppointment": "boolean",
-            "clientInfo": {
-                "avatarImg": "string",
-                "clientProfileUrl": "string"
-            },
-            "meetingUrl": "string",
-            "eventId": "string"
+            "eventDate": "eventDate",
+            "eventList": [
+                {
+                    "eventTitle": "string",
+                    "duration": "string",
+                    "isAppointment": "boolean",
+                    "clientInfo": {
+                        "avatarImg": "string",
+                        "clientProfileUrl": "string"
+                    },
+                    "meetingUrl": "string",
+                    "eventId": "string"
+                }
+            ]
         }
     ]
 }

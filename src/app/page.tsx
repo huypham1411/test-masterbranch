@@ -1,8 +1,8 @@
 'use client'
-import { Calendar, CalendarProps, ConfigProvider } from 'antd'
+import { Button, Calendar, CalendarProps, ConfigProvider } from 'antd'
 import dayjs, { Dayjs } from 'dayjs'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import LeftSide from './components/LeftSide/page'
+import LeftSide from '../components/LeftSide/page'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import clsx from 'clsx'
 
@@ -169,6 +169,12 @@ export default function Home() {
                 />
             </div>
             <div className="flex">
+                <Button
+                    className="hidden md:block"
+                    onClick={() => setSelectedDate(dayjs())}
+                >
+                    Today
+                </Button>
                 <ConfigProvider
                     theme={{
                         components: {
