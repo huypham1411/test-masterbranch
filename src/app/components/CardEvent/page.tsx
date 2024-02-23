@@ -11,7 +11,8 @@ type Props = {
     onClick: any
 }
 
-const CardEvent = ({ data, selectedEvent, onClick }: Props) => {
+const CardEvent = (prop: Props) => {
+    const { data, selectedEvent, onClick } = prop
     const {
         duration,
         eventTitle,

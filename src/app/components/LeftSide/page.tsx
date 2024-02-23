@@ -8,7 +8,7 @@ import clsx from 'clsx'
 type Props = {
     onChange: (value: Dayjs) => void
     selectedDate: Dayjs
-    data?: Data[]
+    data: Data[]
     selectedEvent?: CalendarEvent
     onEventCardClick: any
 }
