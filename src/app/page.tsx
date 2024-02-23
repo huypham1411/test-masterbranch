@@ -9,7 +9,7 @@ import clsx from 'clsx'
 export type CalendarEvent = {
     eventTitle: string
     duration: string
-    isMeeting?: boolean
+    isAppointment?: boolean
     clientInfo?: {
         avatarImg: string | StaticImport
         clientProfileUrl: string
@@ -35,7 +35,7 @@ export default function Home() {
                         eventId: '1',
                         duration: '9h - 10h',
                         eventTitle: 'Meeting with client',
-                        isMeeting: true,
+                        isAppointment: true,
                         clientInfo: {
                             avatarImg: 'https://i.pravatar.cc/150?img=3',
                             clientProfileUrl: 'https://i.pravatar.cc/150?img=3',
@@ -55,7 +55,7 @@ export default function Home() {
                         eventId: '3',
                         duration: '9h - 10h',
                         eventTitle: 'Meeting with client',
-                        isMeeting: true,
+                        isAppointment: true,
                         clientInfo: {
                             avatarImg: 'https://i.pravatar.cc/150?img=3',
                             clientProfileUrl: 'https://i.pravatar.cc/150?img=3',
@@ -70,7 +70,7 @@ export default function Home() {
                         eventId: '4',
                         duration: '9h - 10h',
                         eventTitle: 'Meeting with client',
-                        isMeeting: true,
+                        isAppointment: true,
                         clientInfo: {
                             avatarImg: 'https://i.pravatar.cc/150?img=3',
                             clientProfileUrl: 'https://i.pravatar.cc/150?img=3',
@@ -85,7 +85,7 @@ export default function Home() {
                         eventId: '5',
                         duration: '9h - 10h',
                         eventTitle: 'Meeting with client',
-                        isMeeting: true,
+                        isAppointment: true,
                         clientInfo: {
                             avatarImg: 'https://i.pravatar.cc/150?img=3',
                             clientProfileUrl: 'https://i.pravatar.cc/150?img=3',

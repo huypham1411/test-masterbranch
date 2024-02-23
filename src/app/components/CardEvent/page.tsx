@@ -16,7 +16,7 @@ const CardEvent = ({ data, selectedEvent, onClick }: Props) => {
         duration,
         eventTitle,
         clientInfo,
-        isMeeting,
+        isAppointment,
         meetingUrl = '#',
         eventId,
     } = data
@@ -51,7 +51,7 @@ const CardEvent = ({ data, selectedEvent, onClick }: Props) => {
                     </div>
                 )}
             </div>
-            {isMeeting && (
+            {isAppointment && (
                 <Link href={meetingUrl}>
                     <VideoCameraOutlined
                         className={clsx(
